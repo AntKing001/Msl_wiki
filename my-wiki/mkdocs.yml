@@ -1,3 +1,17 @@
-site_name: My Docs
+site_name: 始于迁至
+repo_url: https://github.com/AntKing001/MSL_wiki
+repo_name: 'Msl_GitHub'
+site_author: 始于迁至
+
+google_analytics: ['UA-36723568-3', 'mkdocs.org']
+copyright: "Copyright 2023 始于迁至"
+
+docs_dir: 'docs'
+
+#pages:
+#- ['index.md', 'Introduction']
+#- ['user-guide.md', 'User Guide']
+#- ['about.md', 'About']
+
 theme:
   name: 'material'

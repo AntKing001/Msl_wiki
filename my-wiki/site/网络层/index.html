@@ -1,0 +1,997 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="始于迁至">
+      
+      
+      
+        <link rel="prev" href="../%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">
+      
+      
+        <link rel="next" href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>网络层 - 始于迁至</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ipv4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="始于迁至" class="md-header__button md-logo" aria-label="始于迁至" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            始于迁至
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              网络层
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/AntKing001/MSL_wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Msl_GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="始于迁至" class="md-nav__button md-logo" aria-label="始于迁至" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    始于迁至
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/AntKing001/MSL_wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Msl_GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Welcome to MyWiki
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IO/" class="md-nav__link">
+        I/O
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TCP-UDP/" class="md-nav__link">
+        TCP UDP
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        内存管理
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%BA%94%E7%94%A8%E5%B1%82/" class="md-nav__link">
+        应用层
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" class="md-nav__link">
+        数据链路层
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        文件管理
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          网络层
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        网络层
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ipv4" class="md-nav__link">
+    IPv4
+  </a>
+  
+    <nav class="md-nav" aria-label="IPv4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    历史阶段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv4_1" class="md-nav__link">
+    无分类编址的IPv4地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv4_2" class="md-nav__link">
+    IPv4地址的应用规划
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    主机发送IP数据报
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip_1" class="md-nav__link">
+    路由器转发IP数据报
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rip" class="md-nav__link">
+    路由协议RIP
+  </a>
+  
+    <nav class="md-nav" aria-label="路由协议RIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rip_1" class="md-nav__link">
+    RIP使用跳数作为度量来衡量到达目的网络的距离。
+  </a>
+  
+    <nav class="md-nav" aria-label="RIP使用跳数作为度量来衡量到达目的网络的距离。">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rip_2" class="md-nav__link">
+    RIP认为好的路由就是“距离短”的路由，也就是通过路由器最少的路由。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    当到达同一目的网络有多条“距离相等”的路由时，可以进行等价负载均衡。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rip_3" class="md-nav__link">
+    RIP包含下面三个要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rip_4" class="md-nav__link">
+    RIP的基本工作过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rip_5" class="md-nav__link">
+    RIP的路由条目的更新规则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    “坏消息传得慢问题”
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ospf" class="md-nav__link">
+    开放最短路径优先OSPF
+  </a>
+  
+    <nav class="md-nav" aria-label="开放最短路径优先OSPF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ospf_1" class="md-nav__link">
+    OSPF有以下五种分组类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ospf_2" class="md-nav__link">
+    OSPF在多点接入网络中路由器邻居关系的建立
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ospfospf" class="md-nav__link">
+    为使OSPF可以应用于规模很大的网络，OSPF把一个自治系统分为若干个更小的范围，叫做区域。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        计算机网络第一，二章
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ipv4" class="md-nav__link">
+    IPv4
+  </a>
+  
+    <nav class="md-nav" aria-label="IPv4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    历史阶段
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv4_1" class="md-nav__link">
+    无分类编址的IPv4地址
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv4_2" class="md-nav__link">
+    IPv4地址的应用规划
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    主机发送IP数据报
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip_1" class="md-nav__link">
+    路由器转发IP数据报
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rip" class="md-nav__link">
+    路由协议RIP
+  </a>
+  
+    <nav class="md-nav" aria-label="路由协议RIP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rip_1" class="md-nav__link">
+    RIP使用跳数作为度量来衡量到达目的网络的距离。
+  </a>
+  
+    <nav class="md-nav" aria-label="RIP使用跳数作为度量来衡量到达目的网络的距离。">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rip_2" class="md-nav__link">
+    RIP认为好的路由就是“距离短”的路由，也就是通过路由器最少的路由。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    当到达同一目的网络有多条“距离相等”的路由时，可以进行等价负载均衡。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rip_3" class="md-nav__link">
+    RIP包含下面三个要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rip_4" class="md-nav__link">
+    RIP的基本工作过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rip_5" class="md-nav__link">
+    RIP的路由条目的更新规则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    “坏消息传得慢问题”
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ospf" class="md-nav__link">
+    开放最短路径优先OSPF
+  </a>
+  
+    <nav class="md-nav" aria-label="开放最短路径优先OSPF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ospf_1" class="md-nav__link">
+    OSPF有以下五种分组类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ospf_2" class="md-nav__link">
+    OSPF在多点接入网络中路由器邻居关系的建立
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ospfospf" class="md-nav__link">
+    为使OSPF可以应用于规模很大的网络，OSPF把一个自治系统分为若干个更小的范围，叫做区域。
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>网络层</h1>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">对比方面</td>
+<td style="text-align: center;">虚电路服务</td>
+<td style="text-align: center;">数据报服务</td>
+</tr>
+<tr>
+<td style="text-align: center;">思路</td>
+<td style="text-align: center;">可靠通信应当由网络来保证</td>
+<td style="text-align: center;">可靠通信应当由用户主机来保证</td>
+</tr>
+<tr>
+<td style="text-align: center;">连接的建立</td>
+<td style="text-align: center;">必须建立网络层连接</td>
+<td style="text-align: center;">不需要建立网络层连接</td>
+</tr>
+<tr>
+<td style="text-align: center;">终点地址</td>
+<td style="text-align: center;">仅连接阶段使用，每个分组使用短的虚电路号</td>
+<td style="text-align: center;">每个分组都有终点的完整地址</td>
+</tr>
+<tr>
+<td style="text-align: center;">分组的转发</td>
+<td style="text-align: center;">属于同一条虚电路的分组均按照同一路由转发</td>
+<td style="text-align: center;">每个分组可走不同的路由</td>
+</tr>
+<tr>
+<td style="text-align: center;">当节点处故障时</td>
+<td style="text-align: center;">所有通过故障节点的虚电路均不能工作</td>
+<td style="text-align: center;">出故障的节点可能回丢失分组，一些路由可能回发生变化</td>
+</tr>
+<tr>
+<td style="text-align: center;">分组的顺序</td>
+<td style="text-align: center;">总是按顺序到达终点</td>
+<td style="text-align: center;">到达终点不一定按顺序</td>
+</tr>
+<tr>
+<td style="text-align: center;">服务质量保证</td>
+<td style="text-align: center;">可以将通信资源提前分配给每一个虚电路，容易实现</td>
+<td style="text-align: center;">很难实现</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ipv4">IPv4</h2>
+<h3 id="_1">概念</h3>
+<pre><code>IPv4地址就是给因特网名字上的每一台主机（或路由器）的每一个接口分配一个在全世界范围哪是唯一的32比特的标识符。
+</code></pre>
+<h3 id="_2">历史阶段</h3>
+<pre><code>分类编址 --&gt;  划分子网 --&gt;  无分类编址
+</code></pre>
+<h3 id="_3"></h3>
+<pre><code>地址0.0.0.0是一个特殊的IPv4地址，只能作为原地址使用，表示“在本网络上的主角”。封装有DHCP Disvovery报文的IP分组的原地址使用0.0.0.0
+
+以127开头且后面三个字节非“全0”或“全1”的IP地址是一类特殊的IPv4地址，既可以做原地址使用，也可以做目的地址使用，用于本地软件环回测试，例如常用的环回测试地址127.0.0.1
+
+地址255.255.255.255是一个特殊的IPv4地址，只能做为目的地址使用，表示“只在本网络上进行广播（各路由器均不转发）”。
+</code></pre>
+<h3 id="ipv4_1">无分类编址的IPv4地址</h3>
+<pre><code>CIDR使用“斜线记法”，或称为CIDR记法。即在IPv4地址后面加上斜线“/”，在斜线后面写上网络前缀所占比特数量。
+
+例如：128.14.37.7/20
+
+网络前缀占用比特数量：20
+
+主机编号占有比特数量：32 - 20 = 12
+</code></pre>
+<h3 id="ipv4_2">IPv4地址的应用规划</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">定长子网掩码</td>
+<td style="text-align: center;">变长子网掩码</td>
+</tr>
+<tr>
+<td style="text-align: center;">使用同一个子网掩码来划分子网</td>
+<td style="text-align: center;">使用不同的子网掩码来划分子网</td>
+</tr>
+<tr>
+<td style="text-align: center;">子网划分方式不灵活：只能划分2的次幂的子网</td>
+<td style="text-align: center;">子网划分方式灵活，可以按需分配</td>
+</tr>
+<tr>
+<td style="text-align: center;">每个子网的IP地址数量相同，容易造成IP地址的浪费</td>
+<td style="text-align: center;">每个子网的IP地址数量可以不同，尽可能减少第IP地址的浪费</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ip">主机发送IP数据报</h3>
+<pre><code>判断目的主机是否与自己在同一网络
+
+        若在，则直接交付。
+
+        若不在，则属于间接交付，传输给主机所在的默认网关（路由器），由默认网关帮忙转发。
+</code></pre>
+<h3 id="ip_1">路由器转发IP数据报</h3>
+<pre><code>检查IP数据包首部是否出错
+
+        若出错，直接丢弃该IP数据报并通告源主机
+
+        若没有出错，则进行转发
+
+根据IP数据报的目的地址在路由表中查找匹配的条目。
+
+        若找到匹配条目，则转发给条目中指示的下一条。
+
+        若找不到，则丢弃该IP数据报并通告源主机。
+</code></pre>
+<h2 id="rip">路由协议RIP</h2>
+<pre><code>RIP要求自治系统AS内的每一个路由器都要维护它从自己到每一个AS内其它每一个网络的距离记录，这是一组距离，称为“距离向量”。
+</code></pre>
+<h3 id="rip_1">RIP使用跳数作为度量来衡量到达目的网络的距离。</h3>
+<pre><code>路由器到直连网络的距离为1
+
+路由器到非直连网络的距离定义为所经过的路由器数加1
+
+允许一天路径最多只能包含15个路由器。“距离”为16时，表示不可达。因此RIP只适用于小型互联网。
+</code></pre>
+<h4 id="rip_2">RIP认为好的路由就是“距离短”的路由，也就是通过路由器最少的路由。</h4>
+<h4 id="_4">当到达同一目的网络有多条“距离相等”的路由时，可以进行等价负载均衡。</h4>
+<h3 id="rip_3">RIP包含下面三个要点</h3>
+<pre><code>1. 和谁交换信息 仅和相邻路由器交换信息。
+
+2. 交换什么信息 自己的路由表
+
+3. 何时交换信息 周期性交换（例如每30秒）
+</code></pre>
+<h3 id="rip_4">RIP的基本工作过程</h3>
+<pre><code>1. 路由器开始工作时，只知道自己到直连网络的距离为1
+
+2. 每个路由器仅和相邻路由器周期性交换信息。
+
+3. 若干次交换和更新后，每个路由器都知道到达本AS内各网络的最短距离和下一跳地址，称为收敛。
+</code></pre>
+<h3 id="rip_5">RIP的路由条目的更新规则</h3>
+<pre><code>1. 发现新的网络，添加。
+
+2. 到达目的网络，相同下一跳，最新消息，更新。
+
+3. 到达目的网络，不同下一跳，新路由优势，更新。
+
+4. 到达目的网络，不同下一跳，新路由劣势，不更新。
+
+5. 到达目的网络，不同下一跳，等价负载均衡。
+</code></pre>
+<h3 id="_5">“坏消息传得慢问题”</h3>
+<pre><code>“坏消息换得慢问题”又称为路由环路或无穷计数问题。这是距离向量算法的一个固有问题。可以通过多种措施来减少出现该问题的概率或减小该问题带来的危害。
+
+1. 限制最大路径为15（16为不可达）
+
+2. 当路由表发生变化时立即发送更新报文，而不仅是周期性更新。
+
+3. 让路由记录收到某特定路由信息的接口，而不是让同一路由信息再通过此接口反方向传送（即“水平分割”）。
+</code></pre>
+<h2 id="ospf">开放最短路径优先OSPF</h2>
+<pre><code>OSPF是基于链路状态的，而不像RIP那样基于距离向量的。
+
+OSPF采用SPF算法计算路由，从算法上保证不会产生路由环路。
+
+OSPF不限制网络规模，更新效率高，收敛速度快。
+
+链路状态是指本路由器与哪些路由器相邻，以及相应链路的“代价”
+    “代价”是用来表示费用，距离，时延，带宽等等。
+
+使用OSPF的每个路由器都会产生链路状态通告LSA，
+    LSA包含以下内容：直接网络链路信息，邻接路由器网络链路状态信息。
+
+LSA被封装在链路状态更新分组LSU中，采用洪泛法发送。
+
+使用OSPF的每个路由器都有一个链路状态数据库LLSDB，用于储存LSA。
+
+通过各路由器洪泛发送封装有自己的LSA的LSU分组，各路由器的LSDB最终达成一致。
+
+使用OSPF的各路由器基于LSDB进行最短路径SPF计算，构建出自己到其它各路由器的最短路径，即构建各自的路由表
+</code></pre>
+<h3 id="ospf_1">OSPF有以下五种分组类型</h3>
+<pre><code>1. 问候（Hello）分组
+
+2. 数据库（Database  Description）描述分组
+
+3. 链路状态请求（Link State Reaquest）分组
+
+4. 链路状态更新（Link State Update）分组
+
+5. 链路状态确认（Link State Acknowledeg）分组
+</code></pre>
+<h3 id="ospf_2">OSPF在多点接入网络中路由器邻居关系的建立</h3>
+<pre><code>选举指定路由器DR和备用路由器BDR
+
+所有非DR/BDR只与DR/BDR建立邻居关系
+
+非DR/BDR通过DR/BDR交换信息
+</code></pre>
+<h3 id="ospfospf">为使OSPF可以应用于规模很大的网络，OSPF把一个自治系统分为若干个更小的范围，叫做区域。</h3>
+<pre><code>划分区域的好处就是把利用洪泛法交换链路状态信息的范围局限于每一个区域而不是整个自治系统，这样就减少了这个网络上的通讯量。
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright 2023 始于迁至
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
