@@ -7,11 +7,8 @@ google_analytics: ['UA-36723568-3', 'mkdocs.org']
 copyright: "Copyright 2023 始于迁至"
 
 docs_dir: 'docs'
+docs:
 
-#pages:
-#- ['index.md', 'Introduction']
-#- ['user-guide.md', 'User Guide']
-#- ['about.md', 'About']
 
 theme:
   name: 'material'

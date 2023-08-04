@@ -1,38 +1,6 @@
-# Welcome to MyWiki
+Welcome to Msl's Wiki
 
-[//]: # ()
-[//]: # (For full documentation visit [mkdocs.org]&#40;https://www.mkdocs.org&#41;.)
+![](https://s1.imagehub.cc/images/2023/08/04/IMG_2540.jpeg)
 
-[//]: # ()
-[//]: # ()
-[//]: # (## Commands)
+QQ_Mail: 1492798638@qq.com
 
-[//]: # ()
-[//]: # ()
-[//]: # (* `mkdocs new [dir-name]` - Create a new project.)
-
-[//]: # ()
-[//]: # (* `mkdocs serve` - Start the live-reloading docs server.)
-
-[//]: # ()
-[//]: # (* `mkdocs build` - Build the documentation site.)
-
-[//]: # ()
-[//]: # (* `mkdocs -h` - Print help message and exit.)
-
-[//]: # ()
-[//]: # ()
-[//]: # (## Project layout)
-
-[//]: # ()
-[//]: # ()
-[//]: # (    mkdocs.yml    # The configuration file.)
-
-[//]: # ()
-[//]: # (    docs/)
-
-[//]: # ()
-[//]: # (        index.md  # The documentation homepage.)
-
-[//]: # ()
-[//]: # (        ...       # Other markdown pages, images and other files.)
