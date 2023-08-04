@@ -11,17 +11,21 @@
       
       
       
+        <link rel="prev" href="../IO/">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+        <link rel="next" href="../%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>始于迁至</title>
+        <title>TCP UDP - 始于迁至</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
       
       
 
@@ -37,7 +41,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -58,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tcp-udp" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -70,7 +79,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="始于迁至" class="md-header__button md-logo" aria-label="始于迁至" data-md-component="logo">
+    <a href=".." title="始于迁至" class="md-header__button md-logo" aria-label="始于迁至" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -89,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              TCP UDP
             
           </span>
         </div>
@@ -168,7 +177,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="始于迁至" class="md-nav__button md-logo" aria-label="始于迁至" data-md-component="logo">
+    <a href=".." title="始于迁至" class="md-nav__button md-logo" aria-label="始于迁至" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -199,7 +208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Welcome to MyWiki
       </a>
     </li>
@@ -214,7 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/IO/" class="md-nav__link">
+      <a href="../IO/" class="md-nav__link">
         I/O
       </a>
     </li>
@@ -227,11 +236,103 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/TCP-UDP/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TCP UDP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         TCP UDP
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-udp" class="md-nav__link">
+    TCP 与 UDP的比较
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    TCP的可靠性：
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数据包顺序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp_1" class="md-nav__link">
+    TCP拥塞控制
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP拥塞控制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    拥塞原因
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    拥塞控制过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_2" class="md-nav__link">
+    TCP可靠传输的实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -244,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="md-nav__link">
+      <a href="../%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="md-nav__link">
         内存管理
       </a>
     </li>
@@ -259,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E5%BA%94%E7%94%A8%E5%B1%82/" class="md-nav__link">
+      <a href="../%E5%BA%94%E7%94%A8%E5%B1%82/" class="md-nav__link">
         应用层
       </a>
     </li>
@@ -274,7 +375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" class="md-nav__link">
+      <a href="../%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" class="md-nav__link">
         数据链路层
       </a>
     </li>
@@ -289,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="md-nav__link">
+      <a href="../%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="md-nav__link">
         文件管理
       </a>
     </li>
@@ -304,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%BD%91%E7%BB%9C%E5%B1%82/" class="md-nav__link">
+      <a href="../%E7%BD%91%E7%BB%9C%E5%B1%82/" class="md-nav__link">
         网络层
       </a>
     </li>
@@ -319,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
         计算机网络第一，二章
       </a>
     </li>
@@ -344,6 +445,76 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-udp" class="md-nav__link">
+    TCP 与 UDP的比较
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    TCP的可靠性：
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    数据包顺序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp_1" class="md-nav__link">
+    TCP拥塞控制
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP拥塞控制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    拥塞原因
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    拥塞控制过程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_2" class="md-nav__link">
+    TCP可靠传输的实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -354,8 +525,88 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+  <h1>TCP UDP</h1>
+
+<h3 id="tcp-udp">TCP 与 UDP的比较</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">UDP</td>
+<td style="text-align: center;">TCP</td>
+</tr>
+<tr>
+<td style="text-align: center;">无连接</td>
+<td style="text-align: center;">面向连接</td>
+</tr>
+<tr>
+<td style="text-align: center;">面向一对一，一对多，多对一和多对多</td>
+<td style="text-align: center;">每一条TCP连接只能有两个端点EP，只能一对一通信</td>
+</tr>
+<tr>
+<td style="text-align: center;">对应用层交付的报文直接打包</td>
+<td style="text-align: center;">面向字节流</td>
+</tr>
+<tr>
+<td style="text-align: center;">尽最大努力交付，也就是不可靠，不使用流量控制和拥塞控制</td>
+<td style="text-align: center;">可靠传输，使用流量控制和拥塞控制</td>
+</tr>
+<tr>
+<td style="text-align: center;">首部开销小，仅8个字节</td>
+<td style="text-align: center;">首部最小20个字节，最大60字节</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tcp">TCP的可靠性：</h3>
+<pre><code>使用确认，重传和序列号等机制来确保数据传输等完整性与顺序，而UDP不提供这些机制，它是尽可能的交付数据，保证不可靠性。
+</code></pre>
+<h3 id="_1">数据包顺序</h3>
+<pre><code>TCP保证数据包安装发送顺序进行接收，如果有丢失或者乱序的数据包，TCP会进行重传或者重新排序。UDP则不保证数据包的顺序，可能会出现乱序的情况。
+</code></pre>
+<h2 id="tcp_1">TCP拥塞控制</h2>
+<h3 id="_2">拥塞原因</h3>
+<pre><code>1. 再在某段时间内，对网络资源的需求超过了该资源所能提供的可用部分，网络性能就会变坏，这种情况就叫做拥塞。
+
+2. 若出现拥塞而不控制，整个网络的吞吐量将会随输入负荷的增大而降低。
+</code></pre>
+<h3 id="_3">拥塞控制过程</h3>
+<pre><code>1. 发送方维护一个叫做拥塞窗口cwnd的状态变量，其值取决于网络的拥塞程度，并且动态变化。
+
+2. 发送方将拥塞窗口作为发送窗口swnd，即swnd=cwnd。
+
+3. 维护一个慢开始门限ssthresh状态变量。
+</code></pre>
+<h3 id="_4"></h3>
+<pre><code>“慢开始“是指一开始向网络注入的报文段少，并不是值拥塞窗口cwnd增长速度慢；
+
+”拥塞控制“并非完全能够避免拥塞，而是指在拥塞阶段将拥塞窗口控制为按线性规律增长，使网络比较不容易出现拥塞。
+</code></pre>
+<h3 id="tcp_2">TCP可靠传输的实现</h3>
+<pre><code>虽然发送方的发送窗口是根据接收方的接收窗口设置的，但在同一时刻，发送方的发送窗口并不总是和接收方的接收窗口一样大。
+
+对于不按序到达的数据如何处理，TCP并无明确规定。
+
+TCP要求接收方必须有累积确认和捎带确认机制，这样可以减小传输开销，接收方可以在合适的时候发送确认，也可以在自己有数据要发送时把确认信息顺便捎带上。
+
+TCP的通信是全双工通信。通信中的每一方都在发送和接收报文段。因此，每一方都有自己的发送窗口和接收窗口。
+</code></pre>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -391,10 +642,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
