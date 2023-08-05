@@ -1,16 +1,10 @@
-Welcome to My Wiki
+# **Welcome to My Wiki**
 
-# Hello World!
+![](https://github.com/AntKing001/Test/blob/main/wiki%20image/IMG_2540.JPG?raw=true)
 
-![](https://s1.imagehub.cc/images/2023/08/04/IMG_2540.jpeg)
-
-![](../picture/im.jpg)
-
+[//]: # (![]&#40;https://github.com/AntKing001/static/blob/main/IMG_0689.jpeg?raw=true&#41;)
 
 QQ_Mail: 1492798638@qq.com
-
-
-
 
 
 
