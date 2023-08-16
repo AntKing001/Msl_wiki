@@ -267,7 +267,7 @@
   
     <li class="md-nav__item">
       <a href="../http%26%26https/" class="md-nav__link">
-        http && https
+        HTTP && HTTPS
       </a>
     </li>
   
@@ -311,7 +311,7 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    添加域名映射 ：
+    添加域名映射：
   </a>
   
 </li>
@@ -324,16 +324,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    常用命令
+  </a>
+  
+    <nav class="md-nav" aria-label="常用命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#grep" class="md-nav__link">
     grep命令
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#wc" class="md-nav__link">
     wc命令
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -588,7 +601,7 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    添加域名映射 ：
+    添加域名映射：
   </a>
   
 </li>
@@ -601,16 +614,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    常用命令
+  </a>
+  
+    <nav class="md-nav" aria-label="常用命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#grep" class="md-nav__link">
     grep命令
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#wc" class="md-nav__link">
     wc命令
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -631,26 +657,37 @@
 
   <h1>Linux</h1>
 
-<h2 id="_1">添加域名映射 ：</h2>
+<h2 id="_1">添加域名映射：</h2>
 <p>sudo vim /etc/hosts  </p>
 <h2 id="_2">无法正常登录：</h2>
 <ol>
-<li>选择启动时，对着启动的内核摁e,对内核界面进行编辑，在linux16那一行的最后添加 init=/bin/sh  </li>
-<li>然后按ctrl +x。就进入救援模式，也称单用户模式。 </li>
-<li>系统此时是只读模式，改成读写模式执行如下命令:mount -o remount,rw /</li>
-<li>修改/etc/sysconfig/selinux    vim /etc/sysconfig/selinux</li>
-<li>改为SELINUX=disable  </li>
+<li>
+<p>选择启动时，对着启动的内核摁e,对内核界面进行编辑，在linux16那一行的最后添加 init=/bin/sh  </p>
+</li>
+<li>
+<p>然后按ctrl +x。就进入救援模式，也称单用户模式。 </p>
+</li>
+<li>
+<p>系统此时是只读模式，改成读写模式执行如下命令:mount -o remount,rw /</p>
+</li>
+<li>
+<p>修改/etc/sysconfig/selinux    vim /etc/sysconfig/selinux</p>
+</li>
+<li>
+<p>改为SELINUX=disable  </p>
+</li>
 </ol>
-<h2 id="grep">grep命令</h2>
-<pre><code>grep命令用于查找文件里符合条件的字符串或者正则表达式。
-
-grep [options] pattern [files]
-</code></pre>
-<h2 id="wc">wc命令</h2>
-<pre><code>wc用于计算字数，可以计算文件的字节数，字数，或者列数
-
-如果不知道名称，或者文件名为“—”，则从标准输入设备读取数据
-</code></pre>
+<h2 id="_3">常用命令</h2>
+<h4 id="grep">grep命令</h4>
+<ul>
+<li>grep命令用于查找文件里符合条件的字符串或者正则表达式。</li>
+<li>grep [options] pattern [files]</li>
+</ul>
+<h4 id="wc">wc命令</h4>
+<ul>
+<li>wc用于计算字数，可以计算文件的字节数，字数，或者列数</li>
+<li>知道名称，或者文件名为“—”，则从标准输入设备读取数据</li>
+</ul>
 
 
 
