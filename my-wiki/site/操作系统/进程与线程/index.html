@@ -11,17 +11,17 @@
       
       
       
-        <link rel="prev" href="../linux/">
+        <link rel="prev" href="../%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">
       
       
-        <link rel="next" href="../shell/">
+        <link rel="next" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP-UDP/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Redis - 🚀 Msl Wiki</title>
+        <title>进程与线程 - 🚀 Msl Wiki</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#redis" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Redis
+              进程与线程
             
           </span>
         </div>
@@ -221,16 +221,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
       
@@ -239,7 +237,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Note
@@ -252,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Diary/" class="md-nav__link">
+      <a href="../../Note/Diary/" class="md-nav__link">
         Diary
       </a>
     </li>
@@ -266,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http%26%26https/" class="md-nav__link">
+      <a href="../../Note/http%26%26https/" class="md-nav__link">
         HTTP && HTTPS
       </a>
     </li>
@@ -280,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux/" class="md-nav__link">
+      <a href="../../Note/linux/" class="md-nav__link">
         Linux
       </a>
     </li>
@@ -292,69 +290,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Redis
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Note/redis/" class="md-nav__link">
         Redis
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#redis" class="md-nav__link">
-    redis 的安装
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hyperloglog" class="md-nav__link">
-    HyperLogLog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#redis_1" class="md-nav__link">
-    redis 发布订阅
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#redis_2" class="md-nav__link">
-    redis事务
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -366,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shell/" class="md-nav__link">
+      <a href="../../Note/shell/" class="md-nav__link">
         Shell
       </a>
     </li>
@@ -386,14 +326,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -402,7 +344,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           操作系统
@@ -415,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/IO/" class="md-nav__link">
+      <a href="../IO/" class="md-nav__link">
         I/O
       </a>
     </li>
@@ -429,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="md-nav__link">
+      <a href="../%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="md-nav__link">
         内存管理
       </a>
     </li>
@@ -443,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="md-nav__link">
+      <a href="../%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="md-nav__link">
         文件管理
       </a>
     </li>
@@ -455,11 +397,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         进程与线程
       </a>
+      
     </li>
   
 
@@ -593,42 +545,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#redis" class="md-nav__link">
-    redis 的安装
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hyperloglog" class="md-nav__link">
-    HyperLogLog
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#redis_1" class="md-nav__link">
-    redis 发布订阅
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#redis_2" class="md-nav__link">
-    redis事务
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -643,109 +561,25 @@
                   
 
 
-  <h1>Redis</h1>
-
-<h3 id="redis">redis 的安装</h3>
-<pre><code>1. wget http://download.redis.io/releases/redis-6.0.8.tar.gz。
-
-2. tar xzf redis-6.0.8.tar.gz
-
-3. cd redis-6.0.8
-
-4. make
-
-redis 服务程序:redis-server
-
-测试的客户端程序:redis-cli：
-</code></pre>
-<p>下面启动 redis 服务：  </p>
-<ul>
-<li>cd src</li>
-<li>./redis-server</li>
-</ul>
-<p>注意这种方式启动 redis 使用的是默认配置。也可以通过启动参数告诉 redis 使用指定配置文件使用下面命令启动。</p>
-<ul>
-<li>cd src</li>
-<li>./redis-server ../redis.conf</li>
-</ul>
-<p>redis.conf 是一个默认的配置文件。我们可以根据需要使用自己的配置文件。</p>
-<p>启动 redis 服务进程后，就可以使用测试客户端程序 redis-cli 和 redis 服务交互了。 比如：</p>
+<h1 id="_1">用户态与内核态的区别</h1>
+<p>用户态（User Mode）和内核态（Kernel Mode）是操作系统中的两种特权级别，它们有以下几个区别：</p>
 <ol>
 <li>
-<p>cd src  </p>
+<p>访问权限：在用户态下，应用程序只能访问受限的资源和执行受限的操作，例如用户空间的内存、文件和设备。而在内核态下，操作系统具有完全的访问权限，可以访问系统的所有资源和执行所有操作。</p>
 </li>
 <li>
-<p>./redis-cli  </p>
+<p>CPU指令集：在用户态下，CPU只能执行非特权指令，例如算术运算、逻辑运算等。而在内核态下，CPU可以执行特权指令，例如访问设备、修改系统状态等。</p>
 </li>
 <li>
-<p>redis&gt; set foo bar  </p>
-<p>OK  </p>
+<p>中断和异常处理：在用户态下，当发生中断或异常时，操作系统会进行中断处理，将控制权转移到内核态下的中断处理程序中。而在内核态下，操作系统可以直接处理中断和异常，并进行相应的处理操作。</p>
 </li>
 <li>
-<p>redis&gt; get foo  </p>
-<p>"bar"  </p>
+<p>内存保护：在用户态下，应用程序只能访问自己的内存空间，无法访问其他应用程序的内存空间和操作系统的内存空间。而在内核态下，操作系统可以访问所有的内存空间，包括应用程序的内存空间。</p>
+</li>
+<li>
+<p>安全性：由于用户态的应用程序受到限制，操作系统可以对其进行隔离和保护，防止恶意代码对系统造成损害。而内核态下的操作系统具有更高的权限，需要对其进行严格的安全管理，以防止非法访问和恶意操作。</p>
 </li>
 </ol>
-<h3 id="hyperloglog">HyperLogLog</h3>
-<pre><code>Redis HyperLogLog 是用来做基数统计的算法，HyperLogLog   的优点是，在输入元素的数量或者体积非常非常大时，计算基数所需的空间总是固定 的、并且是很小的。
-
-在 Redis 里面，每个 HyperLogLog 键只需要花费 12 KB 内存，就可以计算接近 2^64 个不同元素的基 数。这和计算基数时，元素越多耗费内存就越多的集合形成鲜明对比。
-
-但是，因为 HyperLogLog 只会根据输入元素来计算基数，而不会储存输入元素本身，所以 HyperLogLog 不能像集合那样，返回输入的各个元素。
-</code></pre>
-<h3 id="redis_1">redis 发布订阅</h3>
-<pre><code>redis 127.0.0.1:6379&gt; SUBSCRIBE runoobChat
-
-1 "subscribe"
-
-2 "runoobChat"
-
-3 (integer) 1
-</code></pre>
-<h3 id="redis_2">redis事务</h3>
-<p>以下是一个事务的例子， 它先以 MULTI 开始一个事务， 然后将多个命令入队到事务中， 最后由 EXEC 命令触发事务， 一并执行事务中的所有命令：</p>
-<pre><code>1. redis 127.0.0.1:6379&gt; MULTI
-
-OK
-
-2. redis 127.0.0.1:6379&gt; SET book-name "Mastering C++ in 21 days"
-
-QUEUED
-
-3. redis 127.0.0.1:6379&gt; GET book-name
-
-QUEUED
-
-4. redis 127.0.0.1:6379&gt; SADD tag "C++" "Programming" "Mastering Series"
-
-QUEUED
-
-5. redis 127.0.0.1:6379&gt; SMEMBERS tag
-
-QUEUED
-
-6. redis 127.0.0.1:6379&gt; EXEC
-
-    OK
-
-    "Mastering C++ in 21 days"
-
-    (integer) 3
-
-    "Mastering Series"
-
-    "C++"
-
-    "Programming"
-</code></pre>
-<ul>
-<li>
-<p>单个 Redis 命令的执行是原子性的，但 Redis 没有在事务上增加任何维持原子性的机制，所以 Redis 事务的执行并不是原子性的。  </p>
-</li>
-<li>
-<p>事务可以理解为一个打包的批量执行脚本，但批量指令并非原子化的操作，中间某条指令的失败不会导致前面已做指令的回滚，也不会造成后续的指令不做。</p>
-</li>
-</ul>
 
 
 
