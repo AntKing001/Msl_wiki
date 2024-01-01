@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="始于迁至">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>I/O - 🚀 Msl Wiki</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', "UA-36723568-3", "mkdocs.org");
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">🚀 Msl Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to My Wiki</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Network <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Network/TCP-UDP/" class="dropdown-item">TCP UDP</a>
+</li>
+                                    
+<li>
+    <a href="../../Network/%E5%BA%94%E7%94%A8%E5%B1%82/" class="dropdown-item">应用层</a>
+</li>
+                                    
+<li>
+    <a href="../../Network/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" class="dropdown-item">数据链路层</a>
+</li>
+                                    
+<li>
+    <a href="../../Network/%E7%89%A9%E7%90%86%E5%B1%82/" class="dropdown-item">物理层</a>
+</li>
+                                    
+<li>
+    <a href="../../Network/%E7%BD%91%E7%BB%9C%E5%B1%82/" class="dropdown-item">网络层</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Note <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Note/Diary/" class="dropdown-item">Diary</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/http%26%26https/" class="dropdown-item">HTTP && HTTPS</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/linux/" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/redis/" class="dropdown-item">Redis</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/shell/" class="dropdown-item">Shell</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">OS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">I/O</a>
+</li>
+                                    
+<li>
+    <a href="../test/" class="dropdown-item">TEST</a>
+</li>
+                                    
+<li>
+    <a href="../%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="dropdown-item">内存管理</a>
+</li>
+                                    
+<li>
+    <a href="../%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="dropdown-item">文件管理</a>
+</li>
+                                    
+<li>
+    <a href="../%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" class="dropdown-item">进程与线程</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../Note/shell/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../test/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/AntKing001/MSL_wiki/edit/master/docs/OS/IO.md" class="nav-link">Edit on Msl GitHub
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#io" class="nav-link">I/O控制器</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#io_1" class="nav-link">I/O控制方式</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">设备的分配与回收</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">缓冲区管理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">单缓存</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_19" class="nav-link">磁盘调度算法</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_23" class="nav-link">磁盘管理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="io">I/O控制器</h2>
+<h4 id="_1">功能：</h4>
+<ol>
+<li>
+<p>接收和识别CPU发出的命令（如CPU发来的read/write命令，I/O控制器当中会有相应的控制寄存器来存放命令参数）  </p>
+</li>
+<li>
+<p>向CPU报告设备的状态 （I/O控制器中有相应的状态寄存器，用于记录I/O设备当前的状态，如1表示空闲，0表示忙碌。）  </p>
+</li>
+<li>
+<p>数据交换  </p>
+</li>
+<li>
+<p>地址识别 （类似于内存地址，为了区分设备当中的各个寄存器，也需要给各个寄存器设置一个特定的“地址”，I/O通过CPU提供的“地址”来判断CPU要读写哪个寄存器）    </p>
+</li>
+</ol>
+<h4 id="_2">组成：</h4>
+<ol>
+<li>
+<p>CPU与控制寄存器接口 （实现控制器与CPU之间的通信）</p>
+</li>
+<li>
+<p>I/O逻辑 （负责识别CPU发出的指令，并向设备发出命令）</p>
+</li>
+<li>
+<p>控制器于设备接口 （实现控制器与设备之间的通信）</p>
+</li>
+</ol>
+<h4 id="_3">两种借寄存器编址方式：</h4>
+<ol>
+<li>内存映射：  <br />
+   控制器中的寄存器与内存统一编址
+   可以采用对内存的进行操作的指令来对控制器进行操作 </li>
+<li>寄存器独立编址
+   控制器当中的寄存器独立编址
+   需要专门设置指令来操作控制器</li>
+</ol>
+<h4 id="_4">注意：</h4>
+<ol>
+<li>
+<p>一个I/O控制器可能对应多个设备</p>
+</li>
+<li>
+<p>数据寄存器，状态寄存器，控制寄存器可能有多个</p>
+</li>
+</ol>
+<h2 id="io_1">I/O控制方式</h2>
+<ol>
+<li>
+<p>程序直接控制方式</p>
+</li>
+<li>
+<p>中断驱动方式</p>
+</li>
+<li>
+<p>DMA方式</p>
+</li>
+<li>
+<p>通道控制方式</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">完成一次读写过程</th>
+<th style="text-align: center;">CPU干预频率</th>
+<th style="text-align: center;">每次I/O的数据传输单位</th>
+<th style="text-align: center;">数据流向</th>
+<th style="text-align: center;">优缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">程序直接控制方式</td>
+<td style="text-align: center;">CPU发出轮训后需要不断轮询</td>
+<td style="text-align: center;">极高</td>
+<td style="text-align: center;">字</td>
+<td style="text-align: center;">设备—&gt;CPU—&gt;内存 设备&lt;—CPU&lt;—内存</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">这段驱动方式</td>
+<td style="text-align: center;">CPU发出I/O指令之后可以做其它的事，本次I/O完成后设备控制器发出中断信号</td>
+<td style="text-align: center;">高</td>
+<td style="text-align: center;">字</td>
+<td style="text-align: center;">设备—&gt;CPU—&gt;内存   设备&lt;—CPU&lt;—内存</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">DMA方式</td>
+<td style="text-align: center;">CPU发出I/O命令后可以做其它事，本次I/O完成后DMa控制器发出中断信号</td>
+<td style="text-align: center;">中</td>
+<td style="text-align: center;">块</td>
+<td style="text-align: center;">设备-&gt;内存 设备-&gt;内存</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">通道控制方式</td>
+<td style="text-align: center;">CPU发出I/O指令后可以做其它事，通道会执行通道程序以完成I/O，完成后通道向CPU发出中断申请</td>
+<td style="text-align: center;">低</td>
+<td style="text-align: center;">一组块</td>
+<td style="text-align: center;">设备-&gt;内存 设备-&gt;内存</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">设备的分配与回收</h2>
+<h4 id="_6">考虑因素:</h4>
+<p>固有属性：独占设备，共享设备，虚拟设备（SPOOling）</p>
+<p>分配算法：先来先服务， 优先级高者优先，短任务优先</p>
+<p>安全性：安全分配方式，不安全分配方式</p>
+<h4 id="_7">静态分配与动态分配</h4>
+<p>静态分配：进程运行前分配需要的资源，运行结束后归还资源</p>
+<p>动态分配：进程运行过程中动态申请资源</p>
+<h4 id="_8">设备分配管理中的数据结构</h4>
+<p><strong>DCT</strong>(设备控制表)：每个设备对应一张DCT，关键字段：类型/标识符/状态/指向COCT的指针/等待队列指针</p>
+<p>控制器控制表（COCT）：   每个控制器对应一张COCT，关键字段：状态/指向CHCT的指针/等待队列指针</p>
+<p>通道控制表（CHCT）：每个控制器对应一张CHCT，关键字段：状态/等待队列指针</p>
+<p>系统设备表（SDT）：记录整个系统中所有的设备，每个设备对应一表目，关键字段：设备类型/标识符/DCT/驱动程序入口</p>
+<h4 id="_9">设备分配步骤：</h4>
+<ol>
+<li>根据进程请求的物理设备查找SDT </li>
+<li>根据SDT找到DCT并分配设备  </li>
+<li>根据DCT找到COCT并分配控制器 </li>
+<li>
+<p>根据COCT找到CHCT并分配通道</p>
+<p>只有设备，控制器，通道三者都配对成功时，这次设备分配才算成功，之后便可启动I/O设备进行数据传送</p>
+<p>缺点：用户编程时必须使用“物理设备名”，若换一个设备，则程序无法运行，若进程请求的物理设备正在忙碌，则即使系统中还有其它同类型的设备，进程也必须阻塞等待。</p>
+<h4 id="_10">设备分配步骤改进：</h4>
+<p>用户编程时使用逻辑设备名申请，操作系负责实现从逻辑设备到物理设备名的映射（通过LUT）<br />
+逻辑设备表问题：
+1. 整个系统只有一张LUT：各用户所用的逻辑设备名不允许重复</p>
+</li>
+<li>
+<p>每个用户一张LUT：各个用户的设备名可以重复</p>
+</li>
+</ol>
+<h2 id="_11">缓冲区管理</h2>
+<p>概念：是一个存储区域，可以由专门的硬件寄存器组成，也可利用内存作为缓冲区  <br />
+作用：
+1. 缓和I/O设备与CPU之间速度不匹配的矛盾
+2. 减少对CPU的中断频率，放宽CPU中断响应时间的限制 
+3. 解决数据力度不匹配的问题
+4. 提高I/O设备与CPU之间的并行性</p>
+<h2 id="_12">单缓存</h2>
+<p>设备——（T）——缓冲区——（M）——工作区——（C）——处理
+处理一块数据平均耗时max（C，T）+ M
+分析问题的初始形态：工作区慢，缓冲区空</p>
+<h3 id="_13">双缓存</h3>
+<p>处理一块数据平均耗时max（C，T）+ M
+分析问题的初始形态：工作区空，一个缓冲区满，另一个缓冲区空。</p>
+<h3 id="_14">单双缓冲区的区别</h3>
+<ol>
+<li>
+<p>两台机器之间通信时，可以配置缓冲区用于数据的发送和接收。 </p>
+</li>
+<li>
+<p>若两个互相通信的缓冲区设置双缓冲区则可以同一时间实现双向的数据传输。</p>
+</li>
+<li>
+<p>管道通信中的“管道”其实就是缓冲区，要实现数据的双向传输，必须设置两个管道。</p>
+</li>
+</ol>
+<h3 id="_15">循环缓冲区</h3>
+<p>将多个大小相等的缓冲区链接成一个循环队列。
+in指针，指向下一个可以冲入数据的缓冲区
+out指针，指向下一个可以取出数据的缓冲区</p>
+<h3 id="_16">缓存池</h3>
+<h4 id="_17">原理：由系统中公用的缓冲池组成，按使用状况可以分为：空缓冲队列，装满输入数据的缓冲队列（输入队列），装满输出数据的缓冲队列（输出队列）。</h4>
+<p>另外：根据有关缓冲区在实际运算中的不同，又设置了四种工作缓冲区，用于收容输入数据的工作缓冲区（hin），用于提取输入数据的缓冲区（sin），用于收容输出数据的缓冲区（hout），用于提取输出数据的缓冲区（sout）。    </p>
+<h4 id="_18">步骤：</h4>
+<ol>
+<li>输入进程请求输入数据</li>
+<li>计算进程想要取得一块输入数据</li>
+<li>计算进程想要将准备好的数据冲入缓冲区。</li>
+<li>输出进程请求输出数据。</li>
+</ol>
+<h2 id="_19">磁盘调度算法</h2>
+<h3 id="_20">一次磁盘读/写操作所需要的时间</h3>
+<pre><code>寻道时间：启动磁臂，移动磁头所花费的时间（影响最大）。
+
+延迟时间：将目标扇区转到磁头下面所花费的时间
+
+传输时间：读写数据所花费的时间
+</code></pre>
+<h3 id="_21">先来先服务算法</h3>
+<pre><code>原理：根据进程请求访问的先后顺序进行调度
+
+优点：公平，如果请求访问的磁道比较集中，算法性能还算的过去
+
+缺点：如果有大量进程竞争使用磁盘，请求访问的磁道很分散，则FCFS在性能上很差，寻道时间长
+</code></pre>
+<h3 id="sstf">最短寻找时间优先（SSTF）</h3>
+<pre><code>原理：优先处理距离当前磁头最近的磁道，可以保证每次寻道时间最短，但并不能保证总的寻道时间最短。
+
+优点：性能较好，平均寻道时间短
+
+缺点：可能产生“饥饿”现象。
+</code></pre>
+<h3 id="_22">扫描算法</h3>
+<pre><code>原理：SSTF算法会产生饥饿的原因在于：磁头可能在很小的一个区域内来回移动，为了防止这个问题，可以规定，只有磁头移动到最外侧磁道的时候才能往内移动，移动到最内侧磁道才能忘外侧移动。由于磁头移动到方式很像电梯，因此也叫电梯算法。
+
+优点：性能较好，平均寻道时间最短，不会产生饥饿现象。
+
+缺点：只有到达最边上上的磁道才能改变磁头方向；SCAN算法对于各个位置的磁道响应频率不均匀（加入刚处理完90号磁道，那么在此处理90号磁道时需要很长的时间，而响应的199号磁道，很快就可以再次响应199号磁道。）
+</code></pre>
+<h3 id="look">LOOK调度算法</h3>
+<pre><code>原理：在SCAN算法当中只有到达最边上的磁道才可以改变磁头的方向，LOOK调度算法就是为了解决这个问题，如果在磁头移动的方向上已经没有别的请求，就可以立即改变磁头的移动方向。
+
+优点：与SCAN算法相比，不需要每次都移动到最外侧或最内侧的磁道才改变磁头方向，使寻道时间进一步缩短。
+</code></pre>
+<h3 id="c-scan">C-SCAN算法</h3>
+<pre><code>原理：解决了SCAN算法对于各个磁道的响应频率不均匀的缺点，规定只有磁头朝某个特定方向移动时才处理磁道的访问请求，而返回时直接快速移动至起始端而不处理任何请求。
+
+优点：相比于SCAN算法，响应时间更加均匀
+
+缺点：只有到达最边上的磁道才能改变磁头方向，在某些时候磁头不需要移动到最边缘，与SCAN算法相比，平均寻道时间更长。
+</code></pre>
+<h3 id="c-look">C-LOOK算法</h3>
+<pre><code>原理：在C-SCAN算法上进行改进，如果磁头的移动方向上已经没有磁道访问的请求时，就可以立刻让磁头返回，并且磁头只需返回到有磁道访问请求的位置即可。
+
+优点：与C-SCAN算法相比，不需要每次都移动到最外侧或者最内侧时才改变磁头方向，使寻道时间进一步缩短。
+</code></pre>
+<h2 id="_23">磁盘管理</h2>
+<h3 id="_24">磁盘初始化</h3>
+<pre><code>1.进行低级格式化（物理格式化），将磁盘的各个磁道划分扇区。一个扇区通常可以分为头，数据域，尾三个部分组成。扇区所需要的数据结构一般存放在头和尾两个部分，包括扇区校验码（奇偶校验，CRC循环冗余校验码等，校验码用于检验扇区中数据是否发生错误）。
+
+2. 将磁盘分区，每个分区由若干柱面组成。
+
+3. 进行逻辑格式化，创建文件系统，包括穿件文件系统等根目录，初始化储存空间管理所用的数据结构（如位示图，空闲分区表）。
+</code></pre>
+<h3 id="_25">引导快</h3>
+<pre><code>计算机启动时需要运行初始化程序来完成初始化。
+
+ROM中存放很小的自举装入程序。
+
+完整的自举程序存放在初始块（引导块）中。
+</code></pre>
+<h3 id="_26">坏快的管理</h3>
+<pre><code>对于简单的磁盘，可以在逻辑格式化时（建立文件系统时）对整个磁盘进行坏快检查，标明哪个扇区是坏扇区，比如在FAT表上标明（在这种方式中，坏快对操作系统不透明）。
+
+对于复杂的磁盘，磁盘控制器（磁盘内部的一个硬件部件）会维护一个环块链表。在磁盘进行出厂前进行低级格式化时就将坏块链进行初始化。回保留一些“备用扇区”，用于替换坏快。这种方案称为扇区备用。且这种方式中，坏快对操作系统透明。
+</code></pre>
+<h3 id="ssd">固态硬盘SSD</h3>
+<pre><code>原理：基于闪存技术Flah Memory，属于电可擦ROM，即EEPROM
+
+组成：
+
+    1. 闪存翻译层：负责翻译逻辑块号，找到对应页（Page）
+
+    2. 储存介质：多个闪存芯片（Flash Chip）——每个芯片包含多个块（Block）——每个块包含多个页（Page）
+
+读写性能特性：
+
+    1. 以页问单位进行读写——相当于磁盘的”扇区“
+
+    2. 以块为单位”擦除“，擦干净的块，其中每个页都可以写一次，读无限次。
+
+    3. 支持随机访问，系统给定一个逻辑地址，闪存翻译层可以通过电路迅速定位到对应的物理地址。
+
+    4. 读快，写慢，要写的页如果有数据，则不能写入，需要将块内的其它页全部复制到一个新的块中，再写入新的页。
+
+磨损均衡技术：
+
+    思想：将擦除平均分布在各个块上，以提升寿命。
+
+    动态磨损均衡：写入数据时，优先选择累计擦除次数少的新闪存块。
+
+    静态磨损均衡 SSD监测并自动进行数据分配，迁移，让老旧的闪存块承担以读
+
+    为主的储存任务，让较新的闪存块承担更多写的任务。
+
+与机械硬盘相比的特点：
+
+    1. SSD读写速度快，随机访问性能高，用电路控制访问位置，机械硬盘通过磁臂旋转访问位置，有寻道时间和旋转延迟。
+
+    2. SSD安静无噪音，耐摔抗震，能耗低，造假更贵。
+
+    3. SSD的一个“块”被擦除次数过多可能会坏掉，而机械硬盘的扇区不会因为磁写的次数太多而坏掉。
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright 2023 始于迁至</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

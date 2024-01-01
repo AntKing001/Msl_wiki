@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="始于迁至">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>物理层 - 🚀 Msl Wiki</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', "UA-36723568-3", "mkdocs.org");
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">🚀 Msl Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to My Wiki</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Network <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../TCP-UDP/" class="dropdown-item">TCP UDP</a>
+</li>
+                                    
+<li>
+    <a href="../%E5%BA%94%E7%94%A8%E5%B1%82/" class="dropdown-item">应用层</a>
+</li>
+                                    
+<li>
+    <a href="../%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" class="dropdown-item">数据链路层</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">物理层</a>
+</li>
+                                    
+<li>
+    <a href="../%E7%BD%91%E7%BB%9C%E5%B1%82/" class="dropdown-item">网络层</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Note <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Note/Diary/" class="dropdown-item">Diary</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/http%26%26https/" class="dropdown-item">HTTP && HTTPS</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/linux/" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/redis/" class="dropdown-item">Redis</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/shell/" class="dropdown-item">Shell</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">OS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../OS/IO/" class="dropdown-item">I/O</a>
+</li>
+                                    
+<li>
+    <a href="../../OS/test/" class="dropdown-item">TEST</a>
+</li>
+                                    
+<li>
+    <a href="../../OS/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="dropdown-item">内存管理</a>
+</li>
+                                    
+<li>
+    <a href="../../OS/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="dropdown-item">文件管理</a>
+</li>
+                                    
+<li>
+    <a href="../../OS/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" class="dropdown-item">进程与线程</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../%E7%BD%91%E7%BB%9C%E5%B1%82/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/AntKing001/MSL_wiki/edit/master/docs/Network/物理层.md" class="nav-link">Edit on Msl GitHub
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">主要任务：确定与传输媒体接口有关的特性</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">数据通信的相关术语</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">信道</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">三种通信方式</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">两种数据传输方式</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">码元， 波特，速率，带宽</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">奈氏准则和香浓定理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_8" class="nav-link">基带信号与宽带信号</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_9" class="nav-link">编码与调制</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">光纤的特点</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">中继器</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">集线器（多口中继器）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="_1">主要任务：确定与传输媒体接口有关的特性</h2>
+<ol>
+<li>机械特性：规定物理的特性，如采用规格，接口形状，引线数目，引脚数量和排列情况。</li>
+<li>电气特性：规定传输二进制时，线路上的电压范围，阻抗匹配，传输速率和距离限制等。</li>
+<li>功能特性：指明某条线上出现的某一电平表示何种意义，接口部件的信号线用途。</li>
+<li>规程特性：定义各条物理线路的工作规程和时许关系  </li>
+</ol>
+<h2 id="_2">数据通信的相关术语</h2>
+<ol>
+<li>数据：传送信息的实体。</li>
+<li>信号：数据的电气/电磁的表现，时数据在传输过程中的存在形式。</li>
+<li>信源：产生和发送数据的源头。</li>
+<li>信宿：接收数据的终点</li>
+<li>信道：信号传送的媒介，一般用来表示传送信息的介质，因此一条通信信道通常包含一条一条发送信道和接受信道。</li>
+</ol>
+<h2 id="_3">信道</h2>
+<ol>
+<li>
+<p>传输信号:    </p>
+<ul>
+<li>模拟信道（传递模拟信号）</li>
+<li>数字信道（传递数字信号）   </li>
+</ul>
+</li>
+<li>
+<p>传输介质:</p>
+<ul>
+<li>无线信道</li>
+<li>有线信道</li>
+</ul>
+</li>
+</ol>
+<h2 id="_4">三种通信方式</h2>
+<ol>
+<li>单工通信：只有一个方向通信而没有反方向的交互，仅需一条信道。</li>
+<li>通信：通信双方都可以发送货接受信息，任何一方都不能同时发送和接受，需要两天信道。</li>
+<li>通信：通信双发可以同时发送和接受信息，也需要两条信道。</li>
+</ol>
+<h2 id="_5">两种数据传输方式</h2>
+<ol>
+<li>串行传输：速度慢，费用低，适合远距离</li>
+<li>并行传输，速度快，费用高，适合近距离，主要用于计算机内部传输</li>
+</ol>
+<h2 id="_6">码元， 波特，速率，带宽</h2>
+<ol>
+<li>码元：指用一个固定时长的信号波形，代表不同离散数值的基本波形，是数字通信中数字信号的计量单位，这个时长内的信号成为k进制码元，而该时长称为码元宽度。当码元的离散状态有M个时，此时码元为M（M大于2）、进制码元。如：4进制码元：码元的离散状态有4种，即4中高低状态不同的波形00，01，10，11</li>
+<li>码元传输数率：又称码元速率，波形数率，调制数率，符号数率等，它表示单位时间内数字通信系统所传输等码元个数（脉冲个数或者信号变化的次数），单位数波特（Baud）。1波特表示数字通信系统每秒传输一个码元，这里码元可以是多进制的，也可以是二进制的，但码元速率与进制数无关。</li>
+<li>信息传输速率：又称信息速率，比特率，表示单位时间内数字通信系统传输的二进制码元个数（极比特数），单位是比特/秒（b/s）。</li>
+<li>若一个码元携带n个bit的信息量，则M个Baud的码元传输速率锁对应的信息传输数率为M * n bit/s。</li>
+</ol>
+<h2 id="_7">奈氏准则和香浓定理</h2>
+<ol>
+<li>信道带宽:是信道能通过的最高频率和最低频率之差。 </li>
+<li>码间串扰:接受端收到的信号失去码元之间清晰界限的现象。</li>
+<li>奈氏准则：在理想低通（无噪音，带宽受限）条件下，为了避免码间串扰，极限码元传输速率为2W Baud，W是信道带宽，单位是Hz。</li>
+<li>在任何信道中，码元传输速率是有上限的。若传输速率超过此上限，就会出现严重的码间串扰问题，使接受端对码元的完全正确识别成为不可能。</li>
+<li>信道的带宽越宽（即能通过的信号高频分量越多），就可以用更高的速率进行码元的有效传输。</li>
+<li>奈氏准则给出了码元传输速率的限制，但并没有对信息传输速率给出限制</li>
+<li>由于每个码元的传输速率受奈氏准则的制约，所有要提高数据的传输速率，就必须设法使每个码元能携带更多个比特的信息量，这就需要采用多元制的调制方法。</li>
+<li>信噪比 = 信号的平均功率/噪声的平均功率， 常记为S/N，并用分贝（db）作为度量单位。<img alt="" src="https://i.328888.xyz/2023/03/09/SuZpk.png" /></li>
+<li>香农定理：在带宽受限且有噪音的信道中，为了不产生误差，信息的数据传输速率有上限值。<ul>
+<li>信道的带宽或信道中的信噪比越大，则信息的极限传输速率就越高。</li>
+<li>对一定对传输带块的一定的信噪比，信息传输速率的上限就确定了。</li>
+<li>只要信息的传输速率低于信道的极限传输速率，就一定可以找到某种方法来实现无差错的传输。</li>
+<li>香农定理的出的为极限传输速率，实际信道能达到的传输速率要比它低不少。</li>
+<li>从香农定理可以看出，若信道带宽W或信噪比S/N没有上限（不可能），那么信道的极限信息传输速率也就没有上限。</li>
+</ul>
+</li>
+</ol>
+<h2 id="_8">基带信号与宽带信号</h2>
+<ol>
+<li>基带信号：将数字信号0和1直接用两种不同的电压表示，再送到数字信道上去传输（基带传输）。来自信源的信号，想计算机输出的代表各种文字或图像文件的数据信号都属于基带信号。基带信号就是发出的直接表达了要传输的信息的信号，比如说我们说话的声波就是基带信号。</li>
+<li>宽带信号：将基带信号进行调制后形成频分复用模拟信号，再传送到模拟信道上去传输（带宽传输）。
+把基带信号经过载波调制后，把信号频率范围搬移到较高的频段以便在信道中传输（即仅在一段频率范围内能够通过信道）。</li>
+</ol>
+<p>在距离较近时，计算机采用基带传输方式（近距离衰减小，从而信号不容易发生变化）<br />
+在距离较远时，计算机采用宽带传输方式（近距离衰减大，即使信号变化大也能最后过滤出来基带信号）</p>
+<h2 id="_9">编码与调制</h2>
+<p>数据 -----&gt; 数字信号 编码 <br />
+数据 -----&gt; 模拟信号 调制</p>
+<h2 id="_10">光纤的特点</h2>
+<ol>
+<li>传输损耗小，中继距离长，对远距离传输特别经济   </li>
+<li>抗雷电和电磁干扰性能好  </li>
+<li>无窜音干扰，保密性好，也不易被窃听或截取数据   </li>
+<li>体积小，重量轻</li>
+</ol>
+<h2 id="_11">中继器</h2>
+<ol>
+<li>诞生原因：由于存在损耗，在线路上传输的信号功率会逐渐衰减，衰减到一定程度失真，因此就导致接受错误。    </li>
+<li>功能：对信号进行再生与还原，对衰减到信号进行放大，保持与原数据相同，以增加信号传输距离，延长网络长度。  </li>
+<li>中继器两端：两端的网络部分是网段，而不是子网，适用于完全相同的两类网络互联，且两个网段的速率要相同。中继器只将任何电缆上的数据发送到另一端电缆上，它仅用作信号的电气部分，并不管数据中的两端是否有错误数据或不适于网段上数据。  两端可连接相同媒体，也可以连接不同媒体。中继器两端的网段一定是要同一个协议。  </li>
+<li>5-4-3规则：网络标准中对信号的延迟范围做了具体的规定，因为中继器只能在规定范围内进行，否则会出现网络故障。</li>
+</ol>
+<h2 id="_12">集线器（多口中继器）</h2>
+<p>功能：对信号进行再生放大，对衰减的信号进行放大，接受转发到其他所有处于工作状态的端口上，以增加信号传输的距离，延长网络长度。不具备信号定向传输的能力，是一共享式的设备。</p>
+<p><img alt="" src="https://i.328888.xyz/2023/03/10/ouSGC.png" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright 2023 始于迁至</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

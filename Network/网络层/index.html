@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="始于迁至">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>网络层 - 🚀 Msl Wiki</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', "UA-36723568-3", "mkdocs.org");
+            ga('send', 'pageview');
+        </script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">🚀 Msl Wiki</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to My Wiki</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Network <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../TCP-UDP/" class="dropdown-item">TCP UDP</a>
+</li>
+                                    
+<li>
+    <a href="../%E5%BA%94%E7%94%A8%E5%B1%82/" class="dropdown-item">应用层</a>
+</li>
+                                    
+<li>
+    <a href="../%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" class="dropdown-item">数据链路层</a>
+</li>
+                                    
+<li>
+    <a href="../%E7%89%A9%E7%90%86%E5%B1%82/" class="dropdown-item">物理层</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">网络层</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Note <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Note/Diary/" class="dropdown-item">Diary</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/http%26%26https/" class="dropdown-item">HTTP && HTTPS</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/linux/" class="dropdown-item">Linux</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/redis/" class="dropdown-item">Redis</a>
+</li>
+                                    
+<li>
+    <a href="../../Note/shell/" class="dropdown-item">Shell</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">OS <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../OS/IO/" class="dropdown-item">I/O</a>
+</li>
+                                    
+<li>
+    <a href="../../OS/test/" class="dropdown-item">TEST</a>
+</li>
+                                    
+<li>
+    <a href="../../OS/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="dropdown-item">内存管理</a>
+</li>
+                                    
+<li>
+    <a href="../../OS/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/" class="dropdown-item">文件管理</a>
+</li>
+                                    
+<li>
+    <a href="../../OS/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" class="dropdown-item">进程与线程</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../%E7%89%A9%E7%90%86%E5%B1%82/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../Note/Diary/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/AntKing001/MSL_wiki/edit/master/docs/Network/网络层.md" class="nav-link">Edit on Msl GitHub
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#ipv4" class="nav-link">IPv4</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#rip" class="nav-link">路由协议RIP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#ospf" class="nav-link">开放最短路径优先OSPF</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#icmp" class="nav-link">ICMP（网际控制报文协议）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#vpnnat" class="nav-link">VPN（虚拟专用网）与NAT（网络地址转换）</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">对比方面</th>
+<th style="text-align: center;">虚电路服务</th>
+<th style="text-align: center;">数据报服务</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">思路</td>
+<td style="text-align: center;">可靠通信应当由网络来保证</td>
+<td style="text-align: center;">可靠通信应当由用户主机来保证</td>
+</tr>
+<tr>
+<td style="text-align: center;">连接的建立</td>
+<td style="text-align: center;">必须建立网络层连接</td>
+<td style="text-align: center;">不需要建立网络层连接</td>
+</tr>
+<tr>
+<td style="text-align: center;">终点地址</td>
+<td style="text-align: center;">仅连接阶段使用，每个分组使用短的虚电路号</td>
+<td style="text-align: center;">每个分组都有终点的完整地址</td>
+</tr>
+<tr>
+<td style="text-align: center;">分组的转发</td>
+<td style="text-align: center;">属于同一条虚电路的分组均按照同一路由转发</td>
+<td style="text-align: center;">每个分组可走不同的路由</td>
+</tr>
+<tr>
+<td style="text-align: center;">当节点处故障时</td>
+<td style="text-align: center;">所有通过故障节点的虚电路均不能工作</td>
+<td style="text-align: center;">出故障的节点可能回丢失分组，一些路由可能回发生变化</td>
+</tr>
+<tr>
+<td style="text-align: center;">分组的顺序</td>
+<td style="text-align: center;">总是按顺序到达终点</td>
+<td style="text-align: center;">到达终点不一定按顺序</td>
+</tr>
+<tr>
+<td style="text-align: center;">服务质量保证</td>
+<td style="text-align: center;">可以将通信资源提前分配给每一个虚电路，容易实现</td>
+<td style="text-align: center;">很难实现</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ipv4">IPv4</h2>
+<h3 id="_1">概念</h3>
+<pre><code>IPv4地址就是给因特网名字上的每一台主机（或路由器）的每一个接口分配一个在全世界范围哪是唯一的32比特的标识符。
+</code></pre>
+<h3 id="_2">历史阶段</h3>
+<pre><code>分类编址 --&gt;  划分子网 --&gt;  无分类编址
+</code></pre>
+<h3 id="_3"></h3>
+<ol>
+<li>地址0.0.0.0是一个特殊的IPv4地址，只能作为原地址使用，表示“在本网络上的主角”。封装有DHCP Disvovery报文的IP分组的原地址使用0.0.0.0</li>
+<li>以127开头且后面三个字节非“全0”或“全1”的IP地址是一类特殊的IPv4地址，既可以做原地址使用，也可以做目的地址使用，用于本地软件环回测试，例如常用的环回测试地址127.0.0.1</li>
+<li>地址255.255.255.255是一个特殊的IPv4地址，只能做为目的地址使用，表示“只在本网络上进行广播（各路由器均不转发）”。</li>
+</ol>
+<h3 id="ipv4_1">无分类编址的IPv4地址</h3>
+<p>CIDR使用“斜线记法”，或称为CIDR记法。即在IPv4地址后面加上斜线“/”，在斜线后面写上网络前缀所占比特数量。
+例如：128.14.37.7/20
+网络前缀占用比特数量：20
+主机编号占有比特数量：32 - 20 = 12</p>
+<h3 id="ipv4_2">IPv4地址的应用规划</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">定长子网掩码</td>
+<td style="text-align: center;">变长子网掩码</td>
+</tr>
+<tr>
+<td style="text-align: center;">使用同一个子网掩码来划分子网</td>
+<td style="text-align: center;">使用不同的子网掩码来划分子网</td>
+</tr>
+<tr>
+<td style="text-align: center;">子网划分方式不灵活：只能划分2的次幂的子网</td>
+<td style="text-align: center;">子网划分方式灵活，可以按需分配</td>
+</tr>
+<tr>
+<td style="text-align: center;">每个子网的IP地址数量相同，容易造成IP地址的浪费</td>
+<td style="text-align: center;">每个子网的IP地址数量可以不同，尽可能减少第IP地址的浪费</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ip">主机发送IP数据报</h3>
+<p>判断目的主机是否与自己在同一网络
+   * 若在，则直接交付。
+   * 若不在，则属于间接交付，传输给主机所在的默认网关（路由器），由默认网关帮忙转发。</p>
+<h3 id="ip_1">路由器转发IP数据报</h3>
+<p>检查IP数据包首部是否出错
+    若出错，直接丢弃该IP数据报并通告源主机 
+    若没有出错，则进行转发</p>
+<p>根据IP数据报的目的地址在路由表中查找匹配的条目。 
+    若找到匹配条目，则转发给条目中指示的下一条。 
+    若找不到，则丢弃该IP数据报并通告源主机。</p>
+<h2 id="rip">路由协议<strong>RIP</strong></h2>
+<p>RIP要求自治系统AS内的每一个路由器都要维护它从自己到每一个AS内其它每一个网络的距离记录，这是一组距离，称为“距离向量”。</p>
+<h3 id="rip_1">RIP使用跳数作为度量来衡量到达目的网络的距离。</h3>
+<p>路由器到直连网络的距离为1
+路由器到非直连网络的距离定义为所经过的路由器数加1 
+允许一天路径最多只能包含15个路由器。“距离”为16时，表示不可达。因此RIP只适用于小型互联网。</p>
+<p>RIP认为好的路由就是“距离短”的路由，也就是通过路由器最少的路由。
+当到达同一目的网络有多条“距离相等”的路由时，可以进行等价负载均衡。</p>
+<h3 id="rip_2">RIP包含下面三个要点</h3>
+<ol>
+<li>和谁交换信息 仅和相邻路由器交换信息。</li>
+<li>交换什么信息 自己的路由表</li>
+<li>何时交换信息 周期性交换（例如每30秒）</li>
+</ol>
+<h3 id="rip_3">RIP的基本工作过程</h3>
+<ol>
+<li>路由器开始工作时，只知道自己到直连网络的距离为1  </li>
+<li>每个路由器仅和相邻路由器周期性交换信息。  </li>
+<li>若干次交换和更新后，每个路由器都知道到达本AS内各网络的最短距离和下一跳地址，称为收敛。</li>
+</ol>
+<h3 id="rip_4">RIP的路由条目的更新规则</h3>
+<ol>
+<li>发现新的网络，添加。</li>
+<li>到达目的网络，相同下一跳，最新消息，更新。</li>
+<li>到达目的网络，不同下一跳，新路由优势，更新。</li>
+<li>到达目的网络，不同下一跳，新路由劣势，不更新。</li>
+<li>到达目的网络，不同下一跳，等价负载均衡。</li>
+</ol>
+<h3 id="_4">“坏消息传得慢问题”</h3>
+<p>“坏消息换得慢问题”又称为路由环路或无穷计数问题。这是距离向量算法的一个固有问题。可以通过多种措施来减少出现该问题的概率或减小该问题带来的危害。
+1. 限制最大路径为15（16为不可达）
+2. 当路由表发生变化时立即发送更新报文，而不仅是周期性更新。
+3. 让路由记录收到某特定路由信息的接口，而不是让同一路由信息再通过此接口反方向传送（即“水平分割”）。</p>
+<h2 id="ospf">开放最短路径优先<strong>OSPF</strong></h2>
+<p>OSPF是基于链路状态的，而不像RIP那样基于距离向量的。</p>
+<p>OSPF采用SPF算法计算路由，从算法上保证不会产生路由环路。</p>
+<p>OSPF不限制网络规模，更新效率高，收敛速度快。</p>
+<p>链路状态是指本路由器与哪些路由器相邻，以及相应链路的“代价”
+    “代价”是用来表示费用，距离，时延，带宽等等。</p>
+<p>使用OSPF的每个路由器都会产生链路状态通告LSA，
+    LSA包含以下内容：直接网络链路信息，邻接路由器网络链路状态信息。</p>
+<p>LSA被封装在链路状态更新分组LSU中，采用洪泛法发送。</p>
+<p>使用OSPF的每个路由器都有一个链路状态数据库LLSDB，用于储存LSA。</p>
+<p>通过各路由器洪泛发送封装有自己的LSA的LSU分组，各路由器的LSDB最终达成一致。</p>
+<p>使用OSPF的各路由器基于LSDB进行最短路径SPF计算，构建出自己到其它各路由器的最短路径，即构建各自的路由表</p>
+<h3 id="ospf_1">OSPF有以下五种分组类型</h3>
+<pre><code>1. 问候（Hello）分组
+
+2. 数据库（Database  Description）描述分组
+
+3. 链路状态请求（Link State Reaquest）分组
+
+4. 链路状态更新（Link State Update）分组
+
+5. 链路状态确认（Link State Acknowledeg）分组
+</code></pre>
+<h3 id="ospf_2">OSPF在多点接入网络中路由器邻居关系的建立</h3>
+<p>选举指定路由器DR和备用路由器BDR  </p>
+<p>所有非DR/BDR只与DR/BDR建立邻居关系  </p>
+<p>非DR/BDR通过DR/BDR交换信息  </p>
+<p>为使OSPF可以应用于规模很大的网络，OSPF把一个自治系统分为若干个更小的范围，叫做区域划分区域的好处就是把利用洪泛法交换链路状态信息的范围局限于每一个区域而不是整个自治系统，这样就减少了这个网络上的通讯量。</p>
+<h1 id="icmp"><strong>ICMP（网际控制报文协议）</strong></h1>
+<h4 id="icmp_1">ICMP差错报告报文共有以下五种：</h4>
+<ol>
+<li>终点不可达</li>
+<li>源点抑制</li>
+<li>时间超过</li>
+<li>参数问题</li>
+<li>改变路由（重定向）</li>
+</ol>
+<h4 id="icmp_2">以下情况不应该发送ICMP差错报文:</h4>
+<ol>
+<li>
+<p>对ICMP差错报告报文不再发送ICMP差错报告报文。</p>
+</li>
+<li>
+<p>对第一个分片的数据报片的所有后续数据报片都不发送ICMP差错数据报文。</p>
+</li>
+<li>
+<p>对具有多播地址对数据包不发送ICMP差错数据报文。</p>
+</li>
+<li>
+<p>对具有特殊地址（127.0.0.0或0.0.0.0）的数据包不发送ICMP差错数据报文。</p>
+</li>
+</ol>
+<h4 id="icmp_3">常用的ICMP询问报文有以下两种</h4>
+<ol>
+<li>回送请求于回答：
+    ICMP回送请求报文是主机或路由器向一个特定的目的主机发出的询问。
+    收到此报文的主机必须给原主机或路由器发送ICMP回送回答报文。
+    这种询问报文用来测试目的站是否可达及其有关状态。</li>
+<li>时间戳请求和回答
+    ICMP时间戳请求报文是请求某个主机或路由器回答当前的时间和日前。
+    在ICMP时间戳回答报文中有一个32位的字段，其中写入的整数代表从1900年1月1日起到当前时刻一共有多少秒。
+    这种询问报文用来进行时钟同步和测量时间。</li>
+</ol>
+<h4 id="icmp_4">ICMP应用举例</h4>
+<ol>
+<li>
+<p>分组网间探测PING
+    用来测试主机或路由器的连通性
+    应用层直接使用网际层的ICMP（没有通过运输层的TCP或UDP）
+    使用ICMP回送请求和回答报文</p>
+</li>
+<li>
+<p>跟踪路由traceroute<br />
+     用来测试IP数据报从源主机到达目的主机要经过哪些路由器  </p>
+<ul>
+<li>windows版本<br />
+    tracert命令<br />
+    应用层直接使用网际层ICMP<br />
+    使用了ICMP回送请求和回答报文以及差错报告报文  </li>
+<li>Unix版本<br />
+    traceroute命令<br />
+    在运输层使用UDP协议<br />
+    仅使用ICMP差错报告报文  </li>
+</ul>
+</li>
+</ol>
+<h1 id="vpnnat">VPN（虚拟专用网）与NAT（网络地址转换）</h1></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright 2023 始于迁至</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
